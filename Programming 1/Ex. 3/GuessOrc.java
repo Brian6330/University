@@ -66,7 +66,7 @@ public class GuessOrc {
 	 */
 	public int calculateHint( int guessedMineShaftId ) {
 		ArrayList<Integer> possibleHints = new ArrayList<Integer>(0);
-		Random random = new Random();
+ 		Random random = new Random();
 
 		if ( java.lang.Math.abs(guessedMineShaftId - mineShaftId) > 5 ) {
 			// very far away
@@ -134,7 +134,7 @@ public class GuessOrc {
 				//Checks if the User has won
 				if(guessInt == mineShaftId){
 					System.out.println("You win!");
-					System.out.println("The orcs got defeated in shaft \'" +getMineShaftAsChar(mineShaftId)+ "\'");
+					System.out.println("The orcs got defeated in shaft \'" + getMineShaftAsChar(mineShaftId) + "\'");
 					System.out.println("");
 
 					// break the loop as already won
