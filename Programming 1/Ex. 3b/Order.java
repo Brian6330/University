@@ -1,15 +1,15 @@
 /*
-* Programmierung 1 HS 2014
-* Aufgabe 3-2
+* Programmming 1 HS 2017
+* Exercise 3b
 *
-* Ruthusanth Vijayakumar (16-131-393)
-* Andreas Gsponer (16-***-***)
+* Brian S. 16-xxx-yyy;
+* Julius O. 16-xxx-yyy;
 */
 
 import java.text.*;
 
-public class Order
-{
+public class Order {
+	
 	//some instance variables
 	private int id;
 	private String customerName;
@@ -25,16 +25,15 @@ public class Order
 	int bookCounter = 1;
 
 	static int instanceCounter = 0;	//************
-	int counter = 0;				//variables that counts ordner.id (lines 33-35)
+	int counter = 0;				//variables that counts order.id (lines 33-35)
 
 	/** constructor */
-	public Order()
-	{
+	public order() {
 		instanceCounter++;
 		counter = instanceCounter;
 		id = counter;
-		customerName = getCustomerName();
-		customerAddress = getCustomerAddress();
+		this.customerName = getCustomerName();
+		this.customerAddress = getCustomerAddress();
 	}
 
 	/** get-/set methods */
@@ -46,31 +45,27 @@ public class Order
 		this.customerName = customerName;
 	}
 
-	public String getCustomerAddress()
-	{
+	public String getCustomerAddress() {
 		return customerAddress;
 	}
 
 	public void setCustomerAddress(String customerAddress) {
-	{
 		this.customerAddress = customerAddress;
 	}
 
 	/** adds max. 5 books into the object order  */
-	public void addBook(Book tmpBook )
-	{
-		switch (bookCounter)
-		{
+	public void addBook(Book inputBook ) {
+		switch (bookCounter){
 			case 1:
-				book1 = tmpBook;
+				book1 = inputBook;
 			case 2:
-				book2 = tmpBook;
+				book2 = inputBook;
 			case 3:
-				book3 = tmpBook;
+				book3 = inputBook;
 			case 4:
-				book4 = tmpBook;
+				book4 = inputBook;
 			case 5:
-				book5 = tmpBook;
+				book5 = inputBook;
 			default:
 				break;
 		}
@@ -78,36 +73,35 @@ public class Order
 	}
 
 	/** gets the sum of all book prices */
-	public int getTotalPrice()
-	{
-		int sumPrice = 0;
+	public int getTotalPrice() {
+		int totalPrice = 0;
 		if (bookCounter > 1)
-			sumPrice += book1.getPrice();
+			totalPrice += book1.getPrice();
 		if (bookCounter > 2)
-			sumPrice += book2.getPrice();
+			totalPrice += book2.getPrice();
 		if (bookCounter > 3)
-			sumPrice += book3.getPrice();
+			totalPrice += book3.getPrice();
 		if (bookCounter > 4)
-			sumPrice += book4.getPrice();
+			totalPrice += book4.getPrice();
 		if (bookCounter > 5)
-			sumPrice += book5.getPrice();
+			totalPrice += book5.getPrice();
 
-		return sumPrice;
+		return totalPrice;
 	}
 
 	/** returns a string representation of the object order */
-	public String toString()
-	{
-		String temp = "Order id: ";
-		temp += id + ", ";
-		temp += "Customer: " + customerName + ", " + customerAddress + "\n";
-		if(bookCounter > 1) temp += book1 + "\n";
-		if(bookCounter > 2) temp += book2 + "\n";
-		if(bookCounter > 3) temp += book3 + "\n";
-		if(bookCounter > 4) temp += book4 + "\n";
-		if(bookCounter > 5) temp += book5 + "\n";
-		temp += "Total price: " + getTotalPrice() + " CHF";
+	public String toString() {
+		String request = "Order id: ";
+		request += id + ", ";
+		request += "Customer: " + customerName + ", " + customerAddress + "\n";
+		if(bookCounter > 1) request += book1 + "\n";
+		if(bookCounter > 2) request += book2 + "\n";
+		if(bookCounter > 3) request += book3 + "\n";
+		if(bookCounter > 4) request += book4 + "\n";
+		if(bookCounter > 5) request += book5 + "\n";
+		request += "Total price: " + getTotalPrice() + " CHF";
 
-		return temp;
+		return request;
 	}
 }
+	
