@@ -37,7 +37,7 @@ private int id;
 
  	/** Returns a String representation of the book */
   	public String toString() {
-    	return id +", "+ title +", "+ author +", "+ dateToString(dateOfPublication) +", " + pruce +", "+ age() +" days old";        //return book details as string
+    	return id +", "+ title +", "+ author +", "+ dateToString(dateOfPublication) +", " + price +" CHF";
   	}
 
   	/** Reads all book data from user input */
