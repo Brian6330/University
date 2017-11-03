@@ -2,8 +2,8 @@
 * Programmming 1 HS 2017
 * Exercise 3b
 *
-* Brian S. 16-xxx-yyy;
-* Julius O. 16-xxx-yyy;
+* Brian S. 16-102-071;
+* Julius O. 16-127-532;
 */
 
 import java.text.*;
