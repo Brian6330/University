@@ -1,6 +1,8 @@
 /*
  Programmierung 1 HS 2017
  Testklasse zu Aufgabe 3b-1
+ Julius Oeftiger 16-127-532
+ Brian Schweigler 16-102-71
 */
 
 import java.text.ParseException;
