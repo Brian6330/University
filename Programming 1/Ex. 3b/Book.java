@@ -25,19 +25,19 @@ private int id;
     	this.author = author;
     	this.dateOfPublication = dateOfPublication;
 		this.price = price;
-  	}
+	}
 
   	/** Returns the age of the book in days since publication */
-  	public int age() {
-    	Date dateNow = new Date();
+	public int age() {
+  		Date dateNow = new Date();
     	long bookAge = ( dateNow.getTime() - dateOfPublication.getTime() ) / (24*60*60*1000);
 
-    return (int) bookAge; //return the age of the book in days
+    	return (int) bookAge; //return the age of the book in days
   	}
 
  	/** Returns a String representation of the book */
   	public String toString() {
-    	return id +", "+ title +", "+ author +", "+ dateToString(dateOfPublication) +", "+ age() +" days old";        //return book details as string
+    	return id +", "+ title +", "+ author +", "+ dateToString(dateOfPublication) +", " + pruce +", "+ age() +" days old";        //return book details as string
   	}
 
   	/** Reads all book data from user input */
